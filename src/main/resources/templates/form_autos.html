@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro Auto</title>
+</head>
+<body>
+<h1>Registro Auto</h1>
+<form action="/guardar_auto" method="post" th:object="${auto}">
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo" th:field="*{modelo}"><br><br>
+
+    <label for="color">Color:</label>
+    <input type="text" id="color" th:field="*{color}"><br><br>
+
+    <label for="kilometraje">Kilometraje:</label>
+    <input type="text" id="kilometraje" th:field="*{kilometraje}"><br><br>
+
+    <label for="sede">Sede:</label>
+    <input type="text" id="sede" th:field="*{sede}"><br><br>
+
+    <label for="costo">Costo:</label>
+    <input type="text" id="costo" th:field="*{costo}"><br><br>
+
+
+    <button type="submit">Guardar</button>
+</form>
+
+</body>
+</html>

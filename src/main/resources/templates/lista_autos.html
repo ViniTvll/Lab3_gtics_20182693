@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Autos</title>
+</head>
+<body>
+<h1>Lista de Autos</h1>
+<table border="1">
+    <tr>
+        <th>Modelo</th>
+        <th>Color</th>
+        <th>Kilometraje</th>
+        <th>Sede</th>
+        <th>Costo</th>
+    </tr>
+    <tr th:each="auto : ${autos}">
+        <td th:text="${auto.modelo}">Modelo</td>
+        <td th:text="${auto.color}">Color</td>
+        <td th:text="${auto.kilometraje}">Kilometraje</td>
+        <td th:text="${auto.sede}">Sede</td>
+        <td th:text="${auto.costo}">Costo</td>
+        <td> <button>  Editar </button></td>
+        <td> <button>  Eliminar </button></td>
+    </tr>
+</table>
+
+<button onclick="window.location='autos';" value="click here"> Agregar Elemento </button>
+</body>
+</html>

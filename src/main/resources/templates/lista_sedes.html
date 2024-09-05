@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Sedes</title>
+</head>
+<body>
+<h1>Lista de Sedes</h1>
+<table border="1">
+    <tr>
+        <th>Distrito</th>
+        <th>Direccion</th>
+
+
+    </tr>
+    <tr th:each="sede : ${sedes}">
+        <td th:text="${sede.distrito}">Distrito</td>
+        <td th:text="${sede.direccion}">Direccion</td>
+        <td> <button>  Editar </button></td>
+        <td> <button>  Eliminar </button></td>
+    </tr>
+</table>
+
+<button onclick="window.location='sedes';" value="click here"> Agregar Elemento </button>
+</body>
+</html>
